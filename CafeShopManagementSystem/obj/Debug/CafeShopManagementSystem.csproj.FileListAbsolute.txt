@@ -1,0 +1,17 @@
+C:\Users\admin\source\repos\CafeShopManagementSystem\bin\Debug\CafeShopManagementSystem.exe.config
+C:\Users\admin\source\repos\CafeShopManagementSystem\bin\Debug\CafeShopManagementSystem.exe
+C:\Users\admin\source\repos\CafeShopManagementSystem\bin\Debug\CafeShopManagementSystem.pdb
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.csproj.AssemblyReference.cache
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.Properties.Resources.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.csproj.GenerateResource.cache
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.csproj.CoreCompileInputs.cache
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.exe
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.pdb
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.LoginForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.MainForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.OrderForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.ProductForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.WarehouseForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.RevenueReportForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.AccountForm.resources
+C:\Users\admin\source\repos\CafeShopManagementSystem\obj\Debug\CafeShopManagementSystem.ProfileForm.resources
