@@ -103,7 +103,7 @@ namespace CafeShopManagementSystem.DAO
             int result = 0;
             if (cnt > 0)
             {
-                string queryUpdate = "UPDATE dbo.Products SET on_sale = 0 WHERE id = " + id;
+                string queryUpdate = "UPDATE dbo.Products SET on_sale = 0, thumbnail = NULL WHERE id = " + id;
                 result = DataProvider.Instance.ExecuteNonQuery(queryUpdate);
             }
             else

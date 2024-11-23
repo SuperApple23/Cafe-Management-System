@@ -88,10 +88,9 @@ namespace CafeShopManagementSystem
         {
             string name = txbName.Text.Trim();
             string description = txbDescription.Text.Trim();
-            double price = 0;
             int categoryID = (cbCategory.SelectedItem as Category).ID;
 
-            if (!Double.TryParse(txbPrice.Text.Trim(), out price) || String.IsNullOrEmpty(name))
+            if (!Double.TryParse(txbPrice.Text.Trim(), out double price) || String.IsNullOrEmpty(name) || price <= 0 || price >= 1000000000000)
             {
                 MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -130,10 +129,9 @@ namespace CafeShopManagementSystem
 
             string name = txbName.Text.Trim();
             string description = txbDescription.Text.Trim();
-            double price = 0;
             int categoryID = (cbCategory.SelectedItem as Category).ID;
 
-            if (!Double.TryParse(txbPrice.Text.Trim(), out price) || String.IsNullOrEmpty(name))
+            if (!Double.TryParse(txbPrice.Text.Trim(), out double price) || String.IsNullOrEmpty(name) || price <= 0 || price >= 1000000000000)
             {
                 MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -178,7 +176,11 @@ namespace CafeShopManagementSystem
                 if (ProductDAO.Instance.DeleteProduct(id))
                 {
                     if (pbProductImage.ImageLocation != null)
+                    {
                         File.Delete(pbProductImage.ImageLocation.ToString());
+                        pbProductImage.ImageLocation = null;
+                        pbProductImage.Image = null;
+                    }
                     MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK);
                     LoadProducts();
 
@@ -190,6 +192,7 @@ namespace CafeShopManagementSystem
 
         private void btnDeleteData_Click(object sender, EventArgs e)
         {
+            btnDeleteData.Text = "Xóa dữ liệu";
             ClearData();
             ChangeFormProduct(true, false, false);
         }
@@ -198,6 +201,7 @@ namespace CafeShopManagementSystem
         {
             if (dtgvProduct.SelectedRows.Count > 0)
             {
+                btnDeleteData.Text = "Hủy chọn";
                 ChangeFormProduct(false, true, true);
 
                 int id = (int)dtgvProduct.SelectedRows[0].Cells[0].Value;

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|c:\\users\\admin\\source\\repos\\cafeshopmanagementsystem\\dao\\revenuedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:dao\\revenuedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|c:\\users\\admin\\source\\repos\\cafeshopmanagementsystem\\dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|c:\\users\\admin\\source\\repos\\cafeshopmanagementsystem\\revenuereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:revenuereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|c:\\users\\admin\\source\\repos\\cafeshopmanagementsystem\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|c:\\users\\admin\\source\\repos\\cafeshopmanagementsystem\\revenuereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:revenuereportform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:orderform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|c:\\users\\admin\\source\\repos\\cafeshopmanagementsystem\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\dao\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{598534E9-0DDC-4621-91F8-951573C67368}|CafeShopManagementSystem.csproj|solutionrelative:dao\\productdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 202,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,54 +38,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RevenueReportForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\RevenueReportForm.cs",
-              "RelativeDocumentMoniker": "RevenueReportForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\RevenueReportForm.cs [Design]",
-              "RelativeToolTip": "RevenueReportForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T11:18:38.876Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RevenueReportForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\RevenueReportForm.cs",
-              "RelativeDocumentMoniker": "RevenueReportForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\RevenueReportForm.cs",
-              "RelativeToolTip": "RevenueReportForm.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAqwBsAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T11:19:29.735Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RevenueDAO.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\DAO\\RevenueDAO.cs",
-              "RelativeDocumentMoniker": "DAO\\RevenueDAO.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\DAO\\RevenueDAO.cs",
-              "RelativeToolTip": "DAO\\RevenueDAO.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAewBsAAACOAQAA",
+              "Title": "DataProvider.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\DAO\\DataProvider.cs",
+              "RelativeDocumentMoniker": "DAO\\DataProvider.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\DAO\\DataProvider.cs",
+              "RelativeToolTip": "DAO\\DataProvider.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T11:16:01.57Z",
+              "WhenOpened": "2024-11-23T09:29:47.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "MainForm.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAAAAFQAAAAtAAAA",
+              "Title": "ProductDAO.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\DAO\\ProductDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\ProductDAO.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\DAO\\ProductDAO.cs",
+              "RelativeToolTip": "DAO\\ProductDAO.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T11:49:28.187Z",
+              "WhenOpened": "2024-11-23T09:08:37.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "OrderForm.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\OrderForm.cs",
+              "RelativeDocumentMoniker": "OrderForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\OrderForm.cs",
+              "RelativeToolTip": "OrderForm.cs",
+              "ViewState": "AQIAAOsAAAAAAAAAAAAAAAEBAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T03:48:08.02Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\OrderForm.cs",
+              "RelativeDocumentMoniker": "OrderForm.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\CafeShopManagementSystem\\OrderForm.cs [Design]",
+              "RelativeToolTip": "OrderForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T03:26:40.533Z"
             }
           ]
         },

@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -50,8 +51,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.revenueChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dtpkChart = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -62,7 +64,7 @@
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -265,38 +267,55 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.chart1);
+            this.panel2.Controls.Add(this.dtpkChart);
+            this.panel2.Controls.Add(this.revenueChart);
             this.panel2.Location = new System.Drawing.Point(20, 307);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1248, 476);
             this.panel2.TabIndex = 1;
             // 
+            // revenueChart
+            // 
+            this.revenueChart.BorderlineColor = System.Drawing.Color.Black;
+            this.revenueChart.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea2.Name = "ChartArea1";
+            this.revenueChart.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.revenueChart.Legends.Add(legend2);
+            this.revenueChart.Location = new System.Drawing.Point(20, 32);
+            this.revenueChart.Name = "revenueChart";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Doanh thu";
+            this.revenueChart.Series.Add(series2);
+            this.revenueChart.Size = new System.Drawing.Size(1036, 412);
+            this.revenueChart.TabIndex = 0;
+            this.revenueChart.Text = "DT";
+            title2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.Name = "Title1";
+            title2.Text = "Thông kê doanh thu trong năm";
+            this.revenueChart.Titles.Add(title2);
+            // 
+            // dtpkChart
+            // 
+            this.dtpkChart.CustomFormat = "yyyy";
+            this.dtpkChart.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpkChart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpkChart.Location = new System.Drawing.Point(1131, 32);
+            this.dtpkChart.Name = "dtpkChart";
+            this.dtpkChart.Size = new System.Drawing.Size(100, 27);
+            this.dtpkChart.TabIndex = 1;
+            this.dtpkChart.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(563, 32);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(1076, 37);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 25);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "Biểu đồ";
-            // 
-            // chart1
-            // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
-            this.chart1.Location = new System.Drawing.Point(142, 79);
-            this.chart1.Name = "chart1";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
-            this.chart1.Size = new System.Drawing.Size(926, 363);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.label2.Size = new System.Drawing.Size(49, 20);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Năm:";
             // 
             // RevenueReportForm
             // 
@@ -322,7 +341,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.revenueChart)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -336,8 +355,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart revenueChart;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -350,5 +368,7 @@
         private System.Windows.Forms.Label lbConsume;
         private System.Windows.Forms.Label lbSpend;
         private System.Windows.Forms.Label lbRevenue;
+        private System.Windows.Forms.DateTimePicker dtpkChart;
+        private System.Windows.Forms.Label label2;
     }
 }

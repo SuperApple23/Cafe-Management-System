@@ -190,7 +190,7 @@ namespace CafeShopManagementSystem
             if (rbNumberOf.Checked) { type = 1; }
             else if (rbAmountOf.Checked) { type = 0; }
 
-            if (!Double.TryParse(txbPrice.Text.Trim(), out price) || String.IsNullOrEmpty(name) || type == -1)
+            if (!Double.TryParse(txbPrice.Text.Trim(), out price) || String.IsNullOrEmpty(name) || type == -1 || price <= 0)
             {
                 MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -219,7 +219,7 @@ namespace CafeShopManagementSystem
             if (rbNumberOf.Checked) { type = 1; }
             else if (rbAmountOf.Checked) { type = 0; }
 
-            if (!Double.TryParse(txbPrice.Text.Trim(), out price) || String.IsNullOrEmpty(name) || type == -1)
+            if (!Double.TryParse(txbPrice.Text.Trim(), out price) || String.IsNullOrEmpty(name) || type == -1 || price <= 0)
             {
                 MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -293,12 +293,12 @@ namespace CafeShopManagementSystem
 
                 double countFloat = 0;
                 int countInt = 0;
-                if (!Double.TryParse(txbCountRe.Text.Trim(), out countFloat) && type == 0)
+                if ((!Double.TryParse(txbCountRe.Text.Trim(), out countFloat) && type == 0) || countFloat <= 0)
                 {
                     MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if (!Int32.TryParse(txbCountRe.Text.Trim(), out countInt) && type == 1)
+                else if ((!Int32.TryParse(txbCountRe.Text.Trim(), out countInt) && type == 1) || countInt <= 0)
                 {
                     MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -500,12 +500,12 @@ namespace CafeShopManagementSystem
 
                 double countFloat = 0;
                 int countInt = 0;
-                if (!Double.TryParse(txbCountIn.Text.Trim(), out countFloat) && type == 0)
+                if ((!Double.TryParse(txbCountIn.Text.Trim(), out countFloat) && type == 0) || countFloat <= 0)
                 {
                     MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if (!Int32.TryParse(txbCountIn.Text.Trim(), out countInt) && type == 1)
+                else if ((!Int32.TryParse(txbCountIn.Text.Trim(), out countInt) && type == 1) || countInt <= 0)
                 {
                     MessageBox.Show("Thông tin không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;

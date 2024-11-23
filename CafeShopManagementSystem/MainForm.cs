@@ -29,10 +29,6 @@ namespace CafeShopManagementSystem
         public MainForm()
         {
             InitializeComponent();
-            productForm1.Visible = false;
-            warehouseForm1.Visible = false;
-            revenueReportForm1.Visible = false;
-            accountForm1.Visible = false;
         }
 
         #region Methods
@@ -60,10 +56,27 @@ namespace CafeShopManagementSystem
             {
                 ShowButtonByRole(true, true, true, true);
             }
+            else if (role == 2)
+            {
+                ShowButtonByRole(true, true, false, true);
+            }
+            else if (role == 3)
+            {
+                ShowButtonByRole(false, false, true, true);
+            }
+
         }
         #endregion
 
         #region Events
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            if (account.RoleID == 3)
+                OpenForm(false, false, true, false, false);
+            else
+                OpenForm(true, false, false, false, false);
+        }
+
         private void OpenOrderFormEvt(object sender, EventArgs e)
         {
             OpenForm(true, false, false, false, false);

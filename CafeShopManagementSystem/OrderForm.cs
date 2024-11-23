@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -245,6 +246,11 @@ namespace CafeShopManagementSystem
 
             if (result == DialogResult.Yes)
             {
+                (printPreviewDialog1 as Form).WindowState = FormWindowState.Maximized;
+                printPreviewDialog1.Document = orderDocument;
+                orderDocument.DefaultPageSettings.PaperSize = new PaperSize("Bill", 500, 600);
+                printPreviewDialog1.ShowDialog();
+
                 OrderDAO.Instance.UpdateOrderAfterPayment(note, buyerName, address, discount, totalMoney, smID, pmID, moneyReceived, currentID);
                 LoadOrders();
                 ClearData();
@@ -372,6 +378,68 @@ namespace CafeShopManagementSystem
             ChangeButtonByOrderType(true, false, false, false, true, true);
             ChangeTextboxByOrderType(false, false, false, false, false);
             ChangeComboBoxByOrderType(true, true, false);
+        }
+
+        private void OrderDocument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("Welcome to Lazy Coffee", new Font("Arial", 13), Brushes.Red, new Point(155, 10));
+            e.Graphics.DrawString("Hoá đơn", new Font("Arial", 10), Brushes.Black, new Point(225, 35));
+
+            e.Graphics.DrawString("_________________________________________________________________", new Font("Arial", 10, FontStyle.Bold), Brushes.Black, new Point(0, 50));
+
+            e.Graphics.DrawString("Mã: " + currentID.ToString(), new Font("Arial", 8), Brushes.Black, new Point(20, 80));
+            e.Graphics.DrawString("Ngày: " + DateTime.Now.ToShortDateString(), new Font("Arial", 8), Brushes.Black, new Point(380, 80));
+
+            e.Graphics.DrawString("Người mua: " + txbBuyerName.Text, new Font("Arial", 8), Brushes.Black, new Point(20, 97));
+            e.Graphics.DrawString("Địa chỉ: " + txbAddress.Text, new Font("Arial", 8), Brushes.Black, new Point(20, 114));
+
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------------", new Font("Arial", 10), Brushes.Black, new Point(10, 130));
+
+            e.Graphics.DrawString("Sản phẩm", new Font("Arial", 7), Brushes.Black, new Point(10, 145));
+            e.Graphics.DrawString("Số lượng", new Font("Arial", 7), Brushes.Black, new Point(300, 145));
+            e.Graphics.DrawString("Giá", new Font("Arial", 7), Brushes.Black, new Point(360, 145));
+            e.Graphics.DrawString("Tổng", new Font("Arial", 7), Brushes.Black, new Point(430, 145));
+
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------------", new Font("Arial", 10), Brushes.Black, new Point(10, 155));
+
+            int yPos = 170;
+
+            double totalMoney = 0;
+            for (int i = 0; i < dtgvProductInOrder.RowCount; i++)
+            {
+                int id = (int)dtgvProductInOrder.Rows[i].Cells[0].Value;
+                int count = (int)dtgvProductInOrder.Rows[i].Cells[2].Value;
+                Product product = ProductDAO.Instance.GetProductByID(id);
+
+                e.Graphics.DrawString(product.Name, new Font("Arial", 7), Brushes.Black, new Point(10, yPos));
+                e.Graphics.DrawString(count.ToString(), new Font("Arial", 7), Brushes.Black, new Point(300, yPos));
+                e.Graphics.DrawString(product.Price.ToString(), new Font("Arial", 7), Brushes.Black, new Point(360, yPos));
+                e.Graphics.DrawString((product.Price * count).ToString(), new Font("Arial", 7), Brushes.Black, new Point(430, yPos));
+
+                totalMoney += product.Price * count;
+                yPos += 15;
+            }
+            e.Graphics.DrawString("----------------------------------------------------------------------------------------------------", new Font("Arial", 10), Brushes.Black, new Point(10, yPos));
+
+            yPos += 20;
+            e.Graphics.DrawString("Tổng tiền: " + totalMoney.ToString("C2"), new Font("Arial", 8), Brushes.Black, new Point(320, yPos));
+            yPos += 20;
+            e.Graphics.DrawString("Giảm giá: " + txbDiscount.Text + "%", new Font("Arial", 8), Brushes.Black, new Point(320, yPos));
+            yPos += 10;
+            e.Graphics.DrawString("----------------------------------", new Font("Arial", 10), Brushes.Black, new Point(320, yPos));
+
+            double discount = Double.Parse(txbDiscount.Text);
+            double finalCost = totalMoney - (totalMoney * discount / 100);
+            yPos += 20;
+            e.Graphics.DrawString("Tiền trả: " + finalCost.ToString("C2"), new Font("Arial", 8), Brushes.Black, new Point(320, yPos));
+
+            double moneyReceived = Double.Parse(txbMoneyReceived.Text);
+            yPos += 20;
+            e.Graphics.DrawString("Tiền nhận: " + moneyReceived.ToString("C2"), new Font("Arial", 8), Brushes.Black, new Point(320, yPos));
+
+            double change = moneyReceived - finalCost;
+            yPos += 20;
+            e.Graphics.DrawString("Tiền thừa: " + change.ToString("C2"), new Font("Arial", 8), Brushes.Black, new Point(320, yPos));
         }
         #endregion
     }
